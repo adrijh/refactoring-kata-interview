@@ -72,5 +72,5 @@ def test_bard_ticket():
 
 def perform_items_upgrade(items: list[Item]) -> list[Item]:
     gilded_rose = GildedRose(items)
-    gilded_rose.update_quality()
+    gilded_rose.update_inventory()
     return gilded_rose.items
