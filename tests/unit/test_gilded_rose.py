@@ -55,6 +55,7 @@ def test_bard_ticket():
         Item(name="Ticket to Lucas The Bard concert", sell_in=5, quality=10),
         Item(name="Ticket to Lucas The Bard concert", sell_in=0, quality=0),
         Item(name="Ticket to Lucas The Bard concert", sell_in=-1, quality=10),
+        Item(name="Ticket to Lucas The Bard concert", sell_in=2, quality=49),
     ])
 
     want = [
@@ -63,6 +64,7 @@ def test_bard_ticket():
         Item(name="Ticket to Lucas The Bard concert", sell_in=4, quality=13),
         Item(name="Ticket to Lucas The Bard concert", sell_in=-1, quality=0),
         Item(name="Ticket to Lucas The Bard concert", sell_in=-2, quality=0),
+        Item(name="Ticket to Lucas The Bard concert", sell_in=1, quality=50),
     ]
 
     assert got == want
