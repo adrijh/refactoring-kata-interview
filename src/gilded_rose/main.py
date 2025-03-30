@@ -1,3 +1,5 @@
+from dataclasses import dataclass
+
 class GildedRose(object):
     def __init__(self, items):
         self.items = items
@@ -33,6 +35,7 @@ class GildedRose(object):
                         item.quality = item.quality + 1
 
 
+@dataclass
 class Item:
     name: str
     sell_in: int
