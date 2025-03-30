@@ -52,6 +52,7 @@ def test_bard_ticket():
     got = perform_items_upgrade([
         Item(name="Ticket to Lucas The Bard concert", sell_in=20, quality=10),
         Item(name="Ticket to Lucas The Bard concert", sell_in=10, quality=10),
+        Item(name="Ticket to Lucas The Bard concert", sell_in=6, quality=10),
         Item(name="Ticket to Lucas The Bard concert", sell_in=5, quality=10),
         Item(name="Ticket to Lucas The Bard concert", sell_in=0, quality=0),
         Item(name="Ticket to Lucas The Bard concert", sell_in=-1, quality=10),
@@ -61,11 +62,15 @@ def test_bard_ticket():
     want = [
         Item(name="Ticket to Lucas The Bard concert", sell_in=19, quality=11),
         Item(name="Ticket to Lucas The Bard concert", sell_in=9, quality=12),
+        Item(name="Ticket to Lucas The Bard concert", sell_in=5, quality=12),
         Item(name="Ticket to Lucas The Bard concert", sell_in=4, quality=13),
         Item(name="Ticket to Lucas The Bard concert", sell_in=-1, quality=0),
         Item(name="Ticket to Lucas The Bard concert", sell_in=-2, quality=0),
         Item(name="Ticket to Lucas The Bard concert", sell_in=1, quality=50),
     ]
+
+    print(f"{got=}")
+    print(f"{want=}")
 
     assert got == want
 
